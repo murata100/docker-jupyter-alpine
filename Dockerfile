@@ -4,7 +4,7 @@ RUN apk update && apk --no-cache add \
     alpine-sdk linux-headers zeromq-dev pkgconfig py3-zmq curl git freetype-dev && \
     pip install --upgrade pip && pip install \
     pyzmq ipython ipykernel pyreadline jupyter \
-    requests pandas pytablewriter && \
+    requests pandas pytablewriter jstyleson && \
     pip install --upgrade cython && \
     pip install matplotlib japanize_matplotlib
 
