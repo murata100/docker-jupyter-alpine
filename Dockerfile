@@ -1,7 +1,7 @@
-FROM python:3.6-alpine3.10
+FROM python:3.8-alpine3.10
 
 RUN apk update && apk --no-cache add \
-    alpine-sdk linux-headers zeromq-dev pkgconfig py3-zmq curl git freetype-dev && \
+    alpine-sdk linux-headers zeromq-dev pkgconfig py3-zmq curl git freetype-dev libffi-dev libjpeg-turbo-dev && \
     pip install --upgrade pip && pip install \
     pyzmq ipython ipykernel pyreadline jupyter \
     requests pandas pytablewriter jstyleson && \
