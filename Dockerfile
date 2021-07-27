@@ -12,6 +12,6 @@ RUN apk update && apk --no-cache add \
 ENV LC_CTYPE=C.UTF-8
 
 RUN mkdir -p $HOME/.jupyter/custom && \
-    echo '.CodeMirror pre, .output pre {font-family: "Noto Sans Mono CJK JP", "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;}' >> $HOME/.jupyter/custom/custom.css
+    echo '.CodeMirror, .output pre {font-family: "Noto Sans Mono CJK JP", "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;}' >> $HOME/.jupyter/custom/custom.css
 
 CMD jupyter notebook --ip=0.0.0.0 --allow-root --NotebookApp.token= --NotebookApp.password=
